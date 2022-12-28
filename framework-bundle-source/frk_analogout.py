@@ -1,10 +1,7 @@
-from framwork import Driver
 import analogio
 
 class AnalogOut(Driver):
-    _defaults = {'value': 0}
-
-    _get_set_del = {'value': 'gs'}
+    value = 0
 
     def _init_device(self):
         self._device = analogio.AnalogOut(self._pin)
